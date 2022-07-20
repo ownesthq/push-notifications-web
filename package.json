@@ -2,7 +2,7 @@
   "name": "@ownesthq/push-notifications-web",
   "version": "1.1.0",
   "description": "",
-  "main": "dist/push-notifications-cjs.js",
+  "main": "dist/push-notifications-cdn.js",
   "types": "index.d.ts",
   "scripts": {
     "build:esm": "rollup -c ./rollup/esm.js",
@@ -14,8 +14,9 @@
     "test:unit": "jest ./src/*",
     "test:ts": "tsd .",
     "test:e2e": "jest ./end-to-end-tests/* --runInBand",
-    "publish-please": "publish-please",
-    "prepublishOnly": "publish-please guard"
+    "prepublishchecks": "npm run lint && npm run test:unit && npm run build:cdn && npm run build:esm && npm run test:e2e",
+    "prepublishOnly": "publish-please guard",
+    "publish-please": "publish-please"
   },
   "keywords": [],
   "author": "Pusher",
@@ -25,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ownesthq/push-notifications-web.git"
+    "url": "git://github.com:ownesthq/push-notifications-web.git"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
