@@ -21,6 +21,9 @@
   "keywords": [],
   "author": "Pusher",
   "license": "MIT",
+  "publishConfig": {
+    "@ownesthq:registry": "https://npm.pkg.github.com/"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-transform-runtime": "^7.4.4",
